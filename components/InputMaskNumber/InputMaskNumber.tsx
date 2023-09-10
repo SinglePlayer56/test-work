@@ -2,8 +2,6 @@
 
 import {InputMaskNumberProps} from "@/components/InputMaskNumber/InputMaskNumber.props";
 import {PatternFormat} from "react-number-format";
-import cn from "classnames";
-import styles from "@/components/Input/Input.module.scss";
 import {Controller} from "react-hook-form";
 
 const InputMaskNumber = ({className, register, onBlur, onFocus, control, label, type, errorsOptions}: InputMaskNumberProps) => {

@@ -7,7 +7,6 @@ import {Input} from "@/components";
 import {AnimatePresence, motion} from 'framer-motion';
 import Image from "next/image";
 import CloseIcon from '@/public/icons/close.svg';
-import {ForwardedRef, forwardRef} from "react";
 import {ContactFormProps} from "@/components/ContactForm/ContactForm.props";
 
 const animationVariants = {

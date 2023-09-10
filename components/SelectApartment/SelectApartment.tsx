@@ -7,7 +7,6 @@ import Image from "next/image";
 import {SelectApartmentProps} from "@/components/SelectApartment/SelectApartment.props";
 import {motion} from 'framer-motion';
 import cn from "classnames";
-import {inspect} from "util";
 
 const animationVariants = {
     hover: {

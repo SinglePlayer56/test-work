@@ -2,10 +2,9 @@
 
 import {InputProps} from "@/components/Input/Input.props";
 import styles from './Input.module.scss';
-import {RegisterOptions, useWatch, Controller} from "react-hook-form";
+import {useWatch} from "react-hook-form";
 import cn from 'classnames';
 import {useEffect, useState} from "react";
-import {PatternFormat} from 'react-number-format';
 import {motion, AnimatePresence} from "framer-motion";
 import {IErrorsVariants} from "@/types";
 import {InputMaskNumber} from "@/components";

@@ -1,4 +1,4 @@
-import {Control, FieldErrors, Path, RegisterOptions, UseFormRegister} from "react-hook-form";
+import {Control, Path, RegisterOptions, UseFormRegister} from "react-hook-form";
 import {IForm} from "@/types";
 import {DetailedHTMLProps, InputHTMLAttributes} from "react";
 
