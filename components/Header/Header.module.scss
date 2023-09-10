@@ -1,0 +1,161 @@
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 29px 0 28px;
+  z-index: 100000;
+
+  @media screen and (min-width: 1770px) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1280.9px){
+    padding: 30px 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023.9px){
+    padding: 40px 0;
+  }
+
+  @media screen and (max-width: 767.9px){
+    padding: 20px 0;
+  }
+
+  &__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-grid-columns: auto auto 1fr auto auto;
+    grid-template-columns: auto auto 1fr auto auto;
+    grid-template-areas: 'burger select logo number phoneButton';
+    justify-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) and (max-width: 1023.9px) {
+      -ms-grid-columns: auto auto 1fr auto;
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-areas: 'burger phoneButton logo select';
+    }
+
+    @media screen and (max-width: 767.9px) {
+      -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 'burger logo phoneButton';
+    }
+  }
+
+  &__burger {
+    grid-area: burger;
+    margin-right: 40px;
+
+    @media screen and (min-width: 1770px){
+      margin-right: 43px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+      margin-right: 25px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      margin-right: 62px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      -ms-grid-column-align: start;
+      justify-self: start;
+    }
+  }
+
+  &__select {
+    grid-area: select;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    margin-left: -75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    @media screen and (min-width: 1770px){
+      margin-left: -85px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280.9px) {
+      margin-left: -65px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023.9px) {
+      margin-left: 28px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      margin-top: -4px;
+    }
+  }
+
+  &__number {
+    grid-area: number;
+
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.1px;
+    color: #000000;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--highlight-color)
+    }
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+
+  &__button {
+    grid-area: phoneButton;
+    margin-left: 40px;
+
+    @media screen and (min-width: 1770px){
+      margin-left: 45px;
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280.9px) {
+      margin-left: 35px;
+    }
+
+    @media screen and (max-width: 1023.9px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      -ms-grid-column-align: end;
+      justify-self: end;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+
+  &__iconWrapper {
+    height: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+
+    @media screen and (min-width: 1770px) {
+      height: 17px;
+    }
+  }
+
+  &__icon,
+  &__icon:before,
+  &__icon:after {
+    width: 32px;
+    height: 2px;
+    background-color: var(--highlight-color);
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+    @media screen and (min-width: 1770px) {
+      width: 38px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 29px;
+      background-color: #000000;
+    }
+  }
+
+  &__icon:before,
+  &__icon:after {
+    position: absolute;
+    content: '';
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__icon:before {
+    top: -6px;
+
+    @media screen and (min-width: 1770px) {
+      top: -7px;
+    }
+  }
+
+  &__icon:after {
+    bottom: -6px;
+
+    @media screen and (min-width: 1770px) {
+      bottom: -7px;
+    }
+  }
+
+  &__iconWrapper:hover &__icon:before {
+    top: -7px;
+
+    @media screen and (min-width: 1770px) {
+      top: -8px;
+    }
+  }
+
+  &__iconWrapper:hover &__icon:after {
+    bottom: -7px;
+
+    @media screen and (min-width: 1770px) {
+      bottom: -7px;
+    }
+  }
+
+  &__text {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+
+    @media screen and (min-width: 1770px) {
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

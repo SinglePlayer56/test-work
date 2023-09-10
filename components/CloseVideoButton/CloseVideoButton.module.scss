@@ -1,0 +1,38 @@
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  z-index: 20;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+
+  &_visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg) translateY(-50%);
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+}

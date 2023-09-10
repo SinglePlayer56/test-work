@@ -1,0 +1,12 @@
+.paragraph {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: var(--text-color);
+  font-size: 26px;
+  text-transform: uppercase;
+
+  & span {
+    color: var(--highlight-color);
+  }
+}
+

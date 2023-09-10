@@ -1,0 +1,97 @@
+.inputContainer {
+  height: 30px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+
+  &__input {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+    caret-color: var(--highlight-color);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+
+    &_visible {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-family: var(--primary-font);
+    line-height: 160%;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    cursor: text;
+
+    &_focus {
+      top: -17px;
+      left: -8px;
+      transform: scale(0.8);
+    }
+  }
+
+  @media screen and (min-width: 1770px) {
+    &__input {
+      font-size: 17px;
+    }
+
+    &__label {
+      font-size: 17px;
+
+      &_focus {
+        top: -22px
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280.9px) {
+    &__input {
+      font-size: 14px;
+    }
+
+    &__label {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 767.9px) {
+    &__input {
+      font-size: 11px;
+    }
+
+    &__label {
+      font-size: 11px;
+
+      &_focus {
+        top: -12px;
+        left: -6px;
+      }
+    }
+  }
+
+  &__error {
+    font-family: var(--primary-font);
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -14px;
+    font-weight: 600;
+  }
+}
